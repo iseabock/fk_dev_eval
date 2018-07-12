@@ -1,0 +1,60 @@
+// Place all the styles related to the format_csv controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+// Place all the styles related to the process_csv controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.format_csv_form {
+  margin: 0 auto;
+  text-align: left;
+  width: 600px;
+
+  div {
+    float: left;
+    width: 100%;
+    margin: 10px;
+
+    label {
+      float: left;
+      width: 150px;
+    }
+
+    input {
+      float: left;
+    }
+
+    textarea {
+      float: left;
+      height: 100px;
+      width: 450px;
+    }
+
+    button {
+      float: right;
+      width: 100px;
+    }
+  }
+}
+
+.formatted-table {
+  clear: both;
+  margin: 0 auto;
+  text-align: center;
+  width: 600px;
+
+  table {
+    td, th {
+      height: 30px;
+      min-width: 30px;
+      padding: 5px;
+      text-align: center;
+    }
+
+  }
+
+  table, td, th {
+    border: 1px solid #CCC;
+  }
+}
