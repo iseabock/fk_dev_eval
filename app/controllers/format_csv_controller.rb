@@ -6,10 +6,15 @@ class FormatCsvController < ApplicationController
 
   def create
     columns    = params[:columns].to_i
-    csv_string = params[:csv_string].split(',')
+    csv_data   = params[:csv_string].split(',')
 
-    @column_arrays = Services::CsvFormatter.new(csv_string, columns).format_csv
-    
+    begin
+      @column_arrays = Services::CsvFormatter.new(csv_data, columns).format_csv
+      @columns       = columns
+    rescue Exception => ex
+      flash[:warning] = ex.message
+    end
+
     render :index
   end
 end

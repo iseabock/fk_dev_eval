@@ -1,8 +1,11 @@
-<%= form_tag("/format_csv", method: "post", class: "format_csv_form") do %>
+<% flash.each do |key, value| %>
+  <div class="alert alert-<%= key %>"><%= value %></div>
+<% end %>
+<%= form_tag("/format_csv", method: "post", class: "format-csv-form") do %>
   <h1 class="h3 mb-3 font-weight-normal">Format CSV String</h1>
   <div class="input-group mb-3">
     <%= label_tag(:format_csv, "Enter CSV String") %>
-    <%= text_area_tag(:csv_string, nil, class: "app_input") %>
+    <%= text_area_tag(:csv_string, nil, class: "csv_string_input") %>
   </div>
   <div class="input-group mb-3">
     <%= label_tag(:format_csv, "Select Columns") %>

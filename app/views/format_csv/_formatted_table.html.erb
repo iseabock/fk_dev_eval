@@ -1,6 +1,6 @@
 <% if @column_arrays %>
   <div class="formatted-table">
-    <table>
+    <table width="100%">
       <thead>
       <% @columns.times do |c| %>
         <th><%= c+1 %></th>
@@ -10,7 +10,7 @@
       <% @column_arrays.each do |row| %>
         <tr>
           <% row.each do |cell| %>
-            <td><%= cell %></td>
+            <td width="(100/<%= @columns %>)%"><%= cell %></td>
           <% end %>
         </tr>
       <% end %>
